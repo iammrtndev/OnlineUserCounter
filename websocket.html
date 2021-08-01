@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>WebSocket Testing</title>
+</head>
+
+<body>
+	<script>
+		new WebSocket("ws://localhost/", "test").onmessage = (e) => document.getElementById("online-user-counter")
+			.innerText = e.data
+	</script>
+	<p>Online user count: <span id="online-user-counter"></span></p>
+</body>
+
+</html>
